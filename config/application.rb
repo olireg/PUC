@@ -10,7 +10,7 @@ module JobsBoard
     
    
 require 'pdfkit'
-config.serve_static_assets = true
+config.assets.initialize_on_precompile = false
 config.middleware.use PDFKit::Middleware, :print_media_type => true 
 
 end
