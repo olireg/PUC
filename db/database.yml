@@ -1,0 +1,31 @@
+development:
+  host:localhost
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: jobs_board-master_development
+  pool: 5
+  username: regufe
+  password: regufe
+  **socket: /opt/local/var/run/mysql5/mysqld.sock**
+test:
+  host:localhost
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: jobs_board-master_test
+  pool: 5
+  username: regufe
+  password: regufe
+  socket: **/opt/local/var/run/mysql5/mysqld.sock**
+
+production:
+  host:localhost
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: jobs_board-master_production
+  pool: 5
+  username: regufe
+  password: regufe
+  socket: **/opt/local/var/run/mysql5/mysqld.sock**

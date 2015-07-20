@@ -1,0 +1,29 @@
+
+Cursos.create(nome:"Mestrado em Design Management", codigocurso:"M103" , instituicao:"Instituto Português de Administração de Marketing do Porto",codidolocal:3)
+
+#Primeiro Ano- Primeiro Semestre
+Category.create(nome:"Gestão Integrada do Design", area_cientifica:"Ciências do Design", anocurricular: 1 , semestre: 1 , creditos: 6 , codigouc: M10311, tipo:"Semestral", teorica_pratica: 30 ,  cursos_id: 3 )
+Category.create(nome:"Design Thinking", area_cientifica:"Ciências do Design", anocurricular: 1 , semestre: 1 , creditos: 6 , codigouc: M10312, tipo:"Semestral", teorica_pratica: 30, cursos_id: 3)
+Category.create(nome:"Comportamento do Consumidor", area_cientifica:"Ciências do Marketing", anocurricular: 1 , semestre: 1 , creditos: 6 , codigouc: M10313, tipo:"Semestral" ,teorica_pratica:30,cursos_id: 3)
+Category.create(nome:"Marketing", area_cientifica:"Ciências do Marketing", anocurricular: 1 , semestre: 1 , creditos: 6 , codigouc: M10314, tipo:"Semestral", teorica_pratica:30,cursos_id: 3)
+Category.create(nome:"Metodologia de Investigação", area_cientifica:"Ciências Sociais e Humanas", anocurricular: 1 , semestre: 1 , creditos: 3 , codigouc: M10315, tipo:"Semestral",teorica:15 ,cursos_id: 3)
+Category.create(nome:"Empreendedorismo e Acesso a Financiamento", area_cientifica:"Ciências do Marketing", anocurricular: 1 , semestre: 1 , creditos: 3 , codigouc:M10316, tipo:"Semestral",teorica:15,cursos_id: 3)
+Category.create(nome:"Gestão Financeira de Projectos", area_cientifica:"Ciências do Marketing", anocurricular: 1 , semestre: 1 , creditos: 3 , codigouc:M10317 , tipo:"Semestral",teorica:15,cursos_id: 3)
+#Primeiro Ano- Segundo Semestre
+
+Category.create(nome:"Branding e Gestão da Comunicação", area_cientifica:"Ciências do Marketing", anocurricular: 1 , semestre: 2 , creditos: 6 , codigouc: M10321, tipo:"Semestral",teorica_pratica:30,cursos_id: 3)
+Category.create(nome:"Gestão da Cadeia de Valor", area_cientifica:"Ciências do Marketing", anocurricular: 1 , semestre: 2 , creditos: 6 , codigouc: M10322, tipo:"Semestral",teorica_pratica:30,cursos_id: 3)
+Category.create(nome:"Planificação e Direção Estratégica", area_cientifica:"Ciências do Marketing", anocurricular: 1 , semestre: 2, creditos: 6 , codigouc: M10323, tipo:"Semestral",teorica_pratica:30,pcursos_id:3)
+Category.create(nome:"Service Design", area_cientifica:"Ciências do Design", anocurricular: 1 , semestre: 2 , creditos: 6 , codigouc: M10324, tipo:"Semestral",teorica_pratica:30,,cursos_id: 3)
+Category.create(nome:"Liderança e Negociação", area_cientifica:"Ciências do Marketing", anocurricular: 1 , semestre: 2 , creditos: 3 , codigouc: M10325, tipo:"Semestral",teorica:15,cursos_id: 3)
+Category.create(nome:"Design e Sustentabilidade", area_cientifica:"Ciências do Design", anocurricular: 1 , semestre: 2 , creditos: 3 , codigouc: M10326, tipo:"Semestral",teorica:15,cursos_id: 3)
+Category.create(nome:"Inovação e Propriedade Intelectual", area_cientifica:"Ciências do Marketing", anocurricular: 1 , semestre: 2 , creditos: 3 , codigouc: M10327, tipo:"Semestral",teorica:15,cursos_id: 3)
+# Segundo Ano - Primeiro Semestre
+
+Category.create(nome:"Tese/Projeto/Relatório de Estágio em Gestão do Design", area_cientifica:"Ciências Design", anocurricular: 2 , semestre: 1, creditos: 24 , codigouc: M10331, tipo:"Semestral",orientacao_tutorial:15,cursos_id: 3)
+Category.create(nome:"Seminários Temáticos", area_cientifica:"Ciências Sociais e Humanas", anocurricular: 2 , semestre: 1, creditos: 3 , codigouc: M10332, tipo:"Semestral",seminarios:15,cursos_id: 3)
+Category.create(nome:"Investigação Aplicada", area_cientifica:"Ciências Sociais e Humanas", anocurricular: 2 , semestre: 1, creditos: 3 , codigouc: M10333, tipo:"Semestral",teorica:15,cursos_id: 3)
+
+#Segundo Ano - Segundo Semestre
+
+Category.create(nome:"Tese/Projeto/Relatório de Estágio em Gestão do Design", area_cientifica:"Ciências Design", anocurricular: 2 , semestre: 2, creditos: 30 , codigouc: M10331, tipo:"Semestral",orientacao_tutorial:15,cursos_id: 3)

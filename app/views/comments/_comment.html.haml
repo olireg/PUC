@@ -1,0 +1,8 @@
+
+.comment.clearfix
+	.content
+		%p.comment_content= comment.comment
+		%p.comment_author= comment.user.email 
+	.buttons
+		= link_to "Edit", edit_job_comment_path(comment.job, comment) , class: "btn2"
+		= button_to "Delete", [comment.job, comment], method: :delete, data: { confirm: "Are you sure?" }, class: "btn2"

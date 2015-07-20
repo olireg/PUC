@@ -1,0 +1,13 @@
+= will_paginate @jobs, renderer: BootstrapPagination::Rails
+ 
+
+
+#jobs
+	%texto= 'PUC para Avaliar' 
+	- @jobs.each do |job|
+		.job
+			%h2= link_to job.category.nome	, job
+			%p= job.docente
+			%p= job.user.email
+			%cor= 'Estado:' + ' '+ job.situacao
+			

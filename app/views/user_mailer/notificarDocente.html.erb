@@ -1,0 +1,16 @@
+
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Caro <%= @job.docente %>  , </h3>
+    <p>
+    O Coordenador de Área já aprovou o seu Plano de Unidade Curricular.
+
+    Pode gerar o PDF do seu PUC tanto em Ingês como em Português.
+    </p>
+	 Para aceder directamenteo ao PUC basta carregar no seguinte link -> <%=link_to "PUC" ,job_url(@job) %>
+
+  </body>
+</html>

@@ -1,0 +1,4 @@
+Polo.create(nome:"Instituto Português de Administração de Marketing do Porto", local: "1");
+Polo.create(nome:"Instituto Português de Administração de Marketing de Lisboa", local: "2");
+Polo.create(nome:"Instituto de Arte, Design e Empresa - Universitário", local: "3");
+Polo.create(nome:"Universidade Europeia", local: "4");

@@ -1,0 +1,21 @@
+
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Caro </h3>
+
+    Foi efetuado um comentario no Plano de Unidade Curricular <%= @job.category.nome %> .
+    <br>
+     <br>
+     <b>Comentario:</b>
+     <br>
+         <%=@comment.comment%>
+     <br>
+     <br>
+	Para consultar o PUC basta carregar no seguinte link <%=link_to "PUC" ,job_url(@job) %>
+    <br>
+  
+  </body>
+</html>

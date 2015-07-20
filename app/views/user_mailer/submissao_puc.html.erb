@@ -1,0 +1,14 @@
+
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Caro Coordenador , </h3>
+    <p>
+      O docente <%= @job.docente %> já submeteu o PUC da unidade <%= @job.category.nome %> para avaliação.
+    </p>
+	 Para consultar o PUC basta carregar no seguinte link <%=link_to "PUC" ,job_url(@job) %>
+
+  </body>
+</html>

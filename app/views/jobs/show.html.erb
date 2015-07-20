@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+<meta charset="UTF-8">
+ 
+
+<style>
+
+
+.btn2 {
+
+    display: inline-block;
+    height: 38px;
+    width: 160px;
+
+    
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 4px;
+  color: #333333;
+  background-color: #FFFFFF;
+  border-color: #adadad;
+  font-family: 'Montserrat', arial, sans-serif;
+  font-weight: bold;
+  
+}
+table {
+  
+   width: 650px;
+   page-break-inside: avoid !important;
+   border-spacing:0; /* Removes the cell spacing via CSS */
+   border-collapse: collapse;
+  
+}
+
+ td, th {
+    page-break-inside: avoid !important;
+    border: 1px solid black;
+    background-color: white;
+    width: 538px;
+    height: 39px;
+}
+
+th {
+    text-align:center;
+    background-color: white;
+    color: black;
+}
+
+
+</style>     
+</head>
+
+<body>
+
+
+
+
+<p>
+
+<% if @job.cursos.codigolocal  == 1 ||  @job.cursos.codigolocal == 2 %> 
+
+  <img src="http://s9.postimg.org/l1kmdc1i7/ipam.jpg" width="200" height="80" alt="Logo da Instituição"/>
+
+<% else %>
+  <img src="http://s9.postimg.org/l1kmdc1i7/ipam.jpg" width="200" height="80" alt="Logo da Instituição"/>
+  <img src="http://s27.postimg.org/oyjcxqxbn/iade.jpg" width="200" height="80" alt="Logo da Instituição"/>
+<% end %>
+
+<p>
+
+<table align="center" >
+  <tr  >
+    <th>Instituição</th>
+    <td colspan="8"><%= @job.cursos.instituicao %> </td>
+  </tr>
+  <tr>
+    <th>Curso</th>
+    <td colspan="8"><%= @job.cursos.nome %></td>
+  </tr>
+  <tr>
+    <th>Unidade Curricular</th>
+    <td colspan="8"><%= @job.category.nome %></td>
+  </tr>
+  <tr>
+    <th align="center" >Área científica</th>
+    <td colspan="8"><%= @job.category.area_cientifica %></td>
+  </tr>
+  <tr>
+    <th  >Ano</th>
+    <th >Creditos</th>
+    <th >Semestre</th>
+    <th  >Tipo</th>
+    <th >Codigo da Unidade Curricular</th>
+    <th  colspan="4">Codigo do Curso</th>
+  </tr>
+   <tr>
+    <td align="center"> <%= @job.category.anocurricular %></td>
+    <td align="center"> <%= @job.category.creditos %></td>
+    <td align="center"> <%= @job.category.semestre %></td>
+    <td align="center"> <%= @job.category.tipo %></td>
+    <td align="center"> <%= @job.category.codigouc %></td>
+    <td align="center" colspan="4"> <%= @job.cursos.codigocurso %></td>
+  </tr>
+  </tr>
+    <th align="center" colspan="4">Horas de trabalho de contacto (total)</th>
+    <th align="center" colspan="5">Tipologia e número das horas de contacto:</th>
+  </tr>
+  <tr>
+    <th  > T/C</th>
+    <th > TP</th>
+    <th  > PL/LP</th>
+    <th  >TC/FW</th>
+    <th  > S </th>
+    <th  > E/I </th>
+    <th > OT/T </th>
+    <th  > O </th>
+    <th > Total </th>
+
+  </tr>
+  <tr>
+    <td align="center"> <%= @job.category.teorica %></td>
+    <td align="center"> <%= @job.category.teorica_pratica %></td>
+    <td align="center"> <%= @job.category.pratica_laboratoriais %></td>
+    <td align="center" > <%= @job.category.trabalho_campo %></td>
+    <td align="center"> <%= @job.category.seminarios%></td>
+    <td align="center"> <%= @job.category.estagio %></td>
+    <td align="center"> <%= @job.category.orientacao_tutorial %></td>
+    <td align="center"> <%= @job.category.outras %></td>
+
+    <td align="center"> <%= bar = [@job.category.teorica  , @job.category.teorica_pratica ,@job.category.pratica_laboratoriais ,@job.category.trabalho_campo ,@job.category.seminarios ,@job.category.estagio ,@job.category.orientacao_tutorial ].compact.sum  %>  </td>
+  </tr>
+  <tr>
+  </tr>
+    <th colspan="1" rowspan="2">Nome do Docente:</th>
+    <th colspan="2" rowspan="2">E-mail do Docente:</th>
+    <th colspan="4">Horas de trabalho independente</th>
+     <th rowspan="2" colspan="2">  Total</th>
+  </tr>
+  <tr>
+    <th>E / S</th>
+    <th> TG / GW</th>
+    <th> TP / PW</th>
+    <th> Horas de avaliação</th>
+  </tr>
+  <tr>
+    <td align="center" colspan="1"> <%= @job.docente%></td>
+    <td align="center" colspan="2"> <%= @job.user.email%></td>
+    <td align="center"> <%= @job.category.estudo %></td>
+    <td align="center"> <%= @job.category.trabalho_grupo %></td>
+    <td align="center"> <%= @job.category.trabalho_projecto  %></td>
+    <td align="center">  <%= @job.category.horas_avaliacao %></td>
+    <td align="center" colspan="2"> <%= bar = [ @job.category.estudo , @job.category.trabalho_grupo , @job.category.trabalho_projecto , @job.category.horas_avaliacao].compact.sum %></td>
+  </tr>
+  <tr>
+    <th>Horas de trabalho de contacto</th>
+    <td align="center" ><%= bar = [@job.category.teorica  , @job.category.teorica_pratica ,@job.category.pratica_laboratoriais ,@job.category.trabalho_campo ,@job.category.seminarios ,@job.category.estagio ,@job.category.orientacao_tutorial ].compact.sum  %> </td>
+    <td align="center" rowspan="3" colspan="7"> T - Teóricas, TP - Teórico-práticas, PL – Práticas Laboratoriais,<br> TC – Trabalho de Campo, S -
+Seminário, E – Estágio, OT - Orientação Tutorial, O – Outras <br> <p> L - Lectures, TP - Theoretical-practical,<br> LP - Laboratory Practices, FW - Field
+Work, S - Seminar I - Internship, T - Tutorial, O - Other</td>
+  </tr>
+   <tr>
+    <th>Horas de trabalho independente</th>
+     <td align="center"><%= bar = [@job.category.estudo , @job.category.trabalho_grupo , @job.category.trabalho_projecto , @job.category.horas_avaliacao].compact.sum%></td>
+  </tr>
+  <tr>
+    <th>Total</th>
+    <td align="center" ><%= bar = [@job.category.teorica  , @job.category.teorica_pratica ,@job.category.pratica_laboratoriais ,@job.category.trabalho_campo ,@job.category.seminarios ,@job.category.estagio ,@job.category.orientacao_tutorial,@job.category.estudo , @job.category.trabalho_grupo , @job.category.trabalho_projecto , @job.category.horas_avaliacao ].compact.sum  %>  </td>
+  </tr>
+  <tr>
+    <th>Língua(s) de ensino</th>
+    <td align="center" colspan="8">Português / Inglês</td>
+  </tr>
+</table>
+ 
+
+ <table align="center" >
+  <tr>
+    <th align="right " pan="8">Objetivos de aprendizagem (conhecimentos, aptidões e competências a desenvolver pelos estudantes):</th>
+  </tr>
+  <tr>
+    <td > <%= @job.objectivos.html_safe %></td>
+  </tr>
+ </table>
+  <table align="center" >
+  <tr>
+    <th colspan="8">Objectives of the curricular unit and competences to be developed: </th>
+  </tr>
+  <tr>
+    <td > <%= @job.objectivos_ing.html_safe %></td>
+  </tr>
+ </table>
+  <table align="center" >
+  <tr>
+    <th colspan="8">Conteúdos programáticos: </th> 
+  </tr>
+  <tr>
+    <td > <%= @job.conteudo.html_safe%></td>
+  </tr>
+ </table>
+   <table align="center" >
+  <tr>
+    <th colspan="8">Syllabus: </th> 
+  </tr>
+  <tr>
+    <td > <%= @job.conteudos_ing.html_safe%></td>
+  </tr>
+ </table>
+  <table align="center" >
+  <tr>
+    <th colspan="8">Demonstração da coerência dos conteúdos programáticos com os objetivos da unidade curricular:  </th> 
+  </tr>
+  <tr>
+    <td > <%= @job.demostracao.html_safe%></td>
+  </tr>
+ </table>
+  <table align="center" >
+  <tr>
+    <th colspan="8">Demonstration of the syllabus coherence with curricular unit´s objectives: </th> 
+  </tr>
+  <tr>
+    <td > <%= @job.demostracao_ing.html_safe%></td>
+  </tr>
+ </table>
+ <table align="center" >
+  <tr>
+    <th colspan="8">Metodologias de ensino (Incluindo Avaliação):  </th> 
+  </tr>
+  <tr>
+    <td > <%= @job.metodologia.html_safe%></td>
+  </tr>
+ </table>
+ <table align="center" >
+  <tr>
+    <th colspan="8">Teaching methodologies (including evaluation):  </th> 
+  </tr>
+  <tr>
+    <td > <%= @job.metodologia_ing.html_safe%></td>
+  </tr>
+ </table>
+  <table align="center" >
+  <tr>
+    <th colspan="8">Bibliografia principal / Netgrafia:  </th> 
+  </tr>
+  <tr>
+    <td > <%= @job.bibliografia.html_safe%></td>
+  </tr>
+ </table>
+   <table align="center" >
+  <tr>
+    <th colspan="8">Main bibliography</th> 
+  </tr>
+    <td > <%= @job.bibliografia_ing.html_safe%></td>
+  </tr>
+ </table>
+<br> 
+
+<p>
+
+<div  id="comments">
+<h3><p><%= @job.comments.count %></p><h3>
+  <%=  render @job.comments%> 
+  <%= render "comments/form" %> 
+  </div>
+<div >
+
+<%# Caso o puc seja de um director de curso ele pode aprovar o proprio PUC , alem editar e gerar os PDFs %>
+
+<% if  current_user.admin?  && @job.user_id == current_user.id  %>
+<ol align="center">
+<li class="btn2"><%= link_to "Back", root_path %></li>
+<li class="btn2"><%= link_to "Edit", edit_job_path(@job) %></li>
+<li class="btn2"><%= button_to"Delete ",job_path(@job),method: :delete %></li> 
+</ol>
+  <ol align="center">
+ 
+  <li class="btn2"> <%= link_to "PUC Aprovado", :controller => "jobs", :action => "notificaDocente", :id => @job.id %></li>
+  <li class="btn2"><%= link_to "PDF em Português", :controller => "jobs", :action => "print", :id => @job.id , :format => "pdf" %></li>
+  <li class="btn2"><%= link_to "PDF em Inglês", :controller => "jobs", :action => "printEN", :id => @job.id , :format => "pdf" %></li>
+
+
+</ol>
+
+<%# Caso o puc seja de um docente ele pode submeter o PUC para aprovação, editar e gerar PDF %>
+<% elsif @job.user_id == current_user.id %>
+
+<ol align="center">
+<li class="btn2"><%= link_to "Back", root_path %></li>
+<li class="btn2"><%= link_to "Edit", edit_job_path(@job) %></li>
+ <li class="btn2"> <%= button_to'Delete ',job_path(@job),method: :delete %></li> 
+</ol>
+  <ol align="center">
+ 
+  <li class="btn2"> <%= link_to "Submeter para Avaliação", :controller => "jobs", :action => "notifica", :id => @job.id %></li>
+  <%if @job.situacao == 'validado'%>
+  <li class="btn2"><%= link_to "PDF em Português", :controller => "jobs", :action => "print", :id => @job.id , :format => "pdf" %></li>
+  <li class="btn2"><%= link_to "PDF em Inglês", :controller => "jobs", :action => "printEN", :id => @job.id , :format => "pdf" %></li>
+<%else%>
+
+<%end%>
+
+</ol>
+
+<%# Caso o puc seja de docentes o Director de curso apenas pode aprovar o PUC %>
+<% elsif  current_user.admin?   %>
+
+<li class="btn2"> <%= link_to "PUC Aprovado", :controller => "jobs", :action => "notificaDocente", :id => @job.id %></li>
+
+<%# Caso o puc coordenador de area apenas pode comentar o PUC %>
+<%else%>
+ <li class="btn2"><%= link_to "Back", root_path %></li>
+<% end %>
+
+ <br>
+ <br>
+</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
+
+
+</body>
+</html>

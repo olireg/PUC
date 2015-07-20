@@ -1,0 +1,23 @@
+= tinymce
+= simple_form_for(@job, html: {multiparte: true, class: 'form-horizontal'}) do |f|
+  %p
+  = f.collection_select :cursos_id, Cursos.all, :id, :nome, {promt: "Selecione o Curso" }, input_html: { class: "dropdown-toggle" }
+  %p
+  = f.grouped_collection_select :category_id, Cursos.order(:nome), :category, :nome, :id, :nome, include_blank: false 
+
+
+  = f.input :docente, label: "Docente", input_html: { class: "form-control" }
+  = f.input :objectivos, label: "objectivos", input_html: { class: "tinymce"}
+  = f.input :objectivos_ing, label: "Objectivos Inglês", input_html: { class: "tinymce" }
+  = f.input :conteudo, label: "Conteudo", input_html: { class: "tinymce" }
+  = f.input :conteudos_ing, label: "Conteudos Inglês", input_html: { class: "tinymce" }
+  = f.input :demostracao, label: "Demostração", input_html: { class: "tinymce" }
+  = f.input :demostracao_ing, label: "Demostração Inglês", input_html: {class: "tinymce"}
+  = f.input :metodologia, label: "Metodologia", input_html: {  class: "tinymce" }
+  = f.input :metodologia_ing, label: "Metodologia Inglês", input_html:{class: "tinymce" }
+  = f.input :bibliografia, label: "Bibliografia", input_html: { class: "tinymce" }
+  = f.input :bibliografia_ing, label: "Bibliografia Inglês",input_html:{class: "tinymce"}
+
+  = f.button :submit , value:"Save PUC", class: "btn btn-sm btn-default"
+  = link_to "Back", root_path, class: "btn btn-sm btn-default"
+  
