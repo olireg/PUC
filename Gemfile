@@ -23,4 +23,5 @@ gem 'will_paginate-bootstrap'
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg'
 end
