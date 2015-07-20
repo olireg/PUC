@@ -20,3 +20,7 @@ gem "wkhtmltopdf-binary"
 gem 'tinymce-rails'
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap'
+
+group :production do
+  gem 'rails_12factor'
+end
