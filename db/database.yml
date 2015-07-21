@@ -20,12 +20,12 @@ test:
   socket: **/opt/local/var/run/mysql5/mysqld.sock**
 
 production:
-  host: ec2-107-21-125-143.compute-1.amazonaws.com
-  adapter: postgresql
+  host:localhost
+  adapter: mysql
   encoding: utf8
   reconnect: false
-  database: d81r65fbujre0a
+  database: jobs_board-master_production
   pool: 5
-  username: cclysmxacjvpqi
-  password: ki4pYiEROknfeGGpIEmc5OFJLH
-  port: 5432
+  username: regufe
+  password: regufe
+  socket: **/opt/local/var/run/mysql5/mysqld.sock**
