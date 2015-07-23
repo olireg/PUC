@@ -1,5 +1,7 @@
 = tinymce
 = simple_form_for(@job, html: {multiparte: true, class: 'form-horizontal'}) do |f|
+ %p
+  = f.collection_select :polos_id, Polos.all, :id, :nome, {promt: "Selecione a instituição" }, input_html: { class: "dropdown-toggle" }
   %p
   = f.collection_select :cursos_id, Cursos.all, :id, :nome, {promt: "Selecione o Curso" }, input_html: { class: "dropdown-toggle" }
   %p
