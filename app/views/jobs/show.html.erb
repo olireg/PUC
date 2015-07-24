@@ -276,7 +276,7 @@ Work, S - Seminar I - Internship, T - Tutorial, O - Other</td>
   <%=  render @job.comments%> 
   <%= render "comments/form" %> 
   </div>
-<div >
+
 
 <%# Caso o puc seja de um director de curso ele pode aprovar o proprio PUC , alem editar e gerar os PDFs %>
 
@@ -305,10 +305,12 @@ Work, S - Seminar I - Internship, T - Tutorial, O - Other</td>
 </ol>
   <ol align="center">
  
-  <li class="btn2"> <%= link_to "Submeter para Avaliação", :controller => "jobs", :action => "notifica", :id => @job.id %></li>
+  <li class="btn2"> <%= link_to "Submeter para Avaliação", :controller => "jobs", :action => "notifica", :id => @job.id   %></li>
   <%if @job.situacao == 'validado'%>
   <li class="btn2"><%= link_to "PDF em Português", :controller => "jobs", :action => "print", :id => @job.id , :format => "pdf" %></li>
   <li class="btn2"><%= link_to "PDF em Inglês", :controller => "jobs", :action => "printEN", :id => @job.id , :format => "pdf" %></li>
+
+
 <%else%>
 
 <%end%>

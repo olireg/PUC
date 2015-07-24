@@ -4,6 +4,7 @@ User.create(:email => "j@ipam.pt", :password => "regufe_regufe", :password_confi
 User.create(:email => "joel.regufe@ipam.pt", :password => "regufe_regufe", :password_confirmation => "regufe_regufe", :gestorM => '1' , :primeiroNome => "Joel", :segundoNome => "Regufe")
 User.create(:email => "a.regufe@gmail.com", :password => "regufe_regufe", :password_confirmation => "regufe_regufe", :gestorCSH => '1' , :primeiroNome => "Alberto", :segundoNome => "Regufe")
 
+
 Polos.create(nome:"Instituto Português de Administração de Marketing do Porto", local: "1");
 Polos.create(nome:"Instituto Português de Administração de Marketing de Lisboa", local: "2");
 Polos.create(nome:"Instituto de Arte, Design e Empresa - Universitário", local: "3");
