@@ -19,11 +19,11 @@
 			= javascript_include_tag :defaults
 			#buttons
 				- if user_signed_in?
-
-					= link_to "Novo Plano", new_job_path
+					= current_user.primeiroNome +  current_user.ultimoNome
+					= link_to "Novo PUC", new_job_path
 					= link_to "PUC para Avaliar", :controller => "jobs", :action => "index"
-					= link_to "Os meus PUC", :controller => "jobs", :action => "index2"
-					= link_to "Puc Validados", :controller => "jobs", :action => "puc_validados"
+					= link_to "Os meus PUC's", :controller => "jobs", :action => "index2"
+					= link_to "PUC Validados", :controller => "jobs", :action => "puc_validados"
 					= link_to "Sign Out", destroy_user_session_path, :method => :delete
 				- else
 					= link_to "Sign Up", new_user_registration_path

@@ -280,7 +280,7 @@ Work, S - Seminar I - Internship, T - Tutorial, O - Other</td>
 
 <%# Caso o puc seja de um director de curso ele pode aprovar o proprio PUC , alem editar e gerar os PDFs %>
 
-<% if  current_user.admin?  && @job.user_id == current_user.id  %>
+<% if  (current_user.coordenadorLicPorto? || current_user.coordenadorMesPorto?  || current_user.coordenadorLiclisboa? ||current_user.coordenadorMesLisboa?)   && @job.user_id == current_user.id  %>
 <ol align="center">
 <li class="btn2"><%= link_to "Back", root_path %></li>
 <li class="btn2"><%= link_to "Edit", edit_job_path(@job) %></li>
@@ -318,7 +318,7 @@ Work, S - Seminar I - Internship, T - Tutorial, O - Other</td>
 </ol>
 
 <%# Caso o puc seja de docentes o Director de curso apenas pode aprovar o PUC %>
-<% elsif  current_user.admin?   %>
+<% elsif current_user.coordenadorLicPorto? || current_user.coordenadorMesPorto?  || current_user.coordenadorLiclisboa? ||current_user.coordenadorMesLisboa?  %>
 
 <li class="btn2"> <%= link_to "PUC Aprovado", :controller => "jobs", :action => "notificaDocente", :id => @job.id %></li>
 

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
  
-  root 'jobs#index'
+  root 'jobs#index2'
   get :notifica, to: 'jobs#notifica', as: :notifica
   get :notificaDocente, to: 'jobs#notificaDocente', as: :notificaDocente
   get :print, to: 'jobs#print', as: :print

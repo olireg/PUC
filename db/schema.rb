@@ -92,12 +92,12 @@ ActiveRecord::Schema.define(version: 20150619093706) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                     default: "", null: false
+    t.string   "encrypted_password",        default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",             default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -105,16 +105,23 @@ ActiveRecord::Schema.define(version: 20150619093706) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin"
-    t.boolean  "gestor"
-    t.integer  "gestorlocal"
-    t.boolean  "gestorCSH"
-    t.boolean  "gestorM"
-    t.boolean  "gestorMQ"
-    t.boolean  "gestorEG"
-    t.boolean  "gestorCM"
-    t.boolean  "gestorCD"
+    t.boolean  "coordenadorLicPorto"
+    t.boolean  "coordenadorMesPorto"
+    t.boolean  "gestorCSHPorto"
+    t.boolean  "gestorMPorto"
+    t.boolean  "gestorMQPorto"
+    t.boolean  "gestorEGPorto"
+    t.boolean  "coordenadorMesDesignPorto"
+    t.boolean  "gestorCMPorto"
+    t.boolean  "gestorCDPorto"
+    t.boolean  "coordenadorLiclisboa"
+    t.boolean  "coordenadorMesLisboa"
+    t.boolean  "gestorMLisboa"
+    t.boolean  "gestorMQLisboa"
+    t.boolean  "gestorEGLisboa"
+    t.boolean  "gestorCSHLisboa"
     t.string   "primeiroNome"
-    t.string   "segundoNome"
+    t.string   "ultimoNome"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

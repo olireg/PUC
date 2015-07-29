@@ -1,8 +1,53 @@
-User.create(:email => "admin@ipam.pt", :password => "regufe_regufe", :password_confirmation => "regufe_regufe", :admin => '1' , :primeiroNome => "j", :segundoNome => "Xpto")
-User.create(:email => "j@ipam.pt", :password => "regufe_regufe", :password_confirmation => "regufe_regufe", :gestorMQ => '1' , :primeiroNome => "j", :segundoNome => "Xpto")
+# Docentes
+User.create(:email => "06118@ipam.pt", :password => "06518366", :password_confirmation => "06518366", :primeiroNome => "Ana", :ultimoNome => "Cruz")
+User.create(:email => "04000@ipam.pt", :password => "06869069", :password_confirmation => "06869069", :primeiroNome => "Caetano", :ultimoNome => "Alves")
+User.create(:email => "04012@ipam.pt", :password => "06882517", :password_confirmation => "06882517", :primeiroNome => "Carlos", :ultimoNome => "Brito")
+User.create(:email => "06334@ipam.pt", :password => "10859129", :password_confirmation => "10859129", :primeiroNome => "Cidália", :ultimoNome => "Neves")
+ 
+User.create(:email => "00653@ipam.pt", :password => "10494676", :password_confirmation => "10494676", :primeiroNome => "Daniel", :ultimoNome => "Sá")
+User.create(:email => "07470@ipam.pt", :password => "10960696", :password_confirmation => "10960696", :primeiroNome => "Filipe", :ultimoNome => "Rodrigues")
+ 
+User.create(:email => "04014@ipam.pt", :password => "05496741", :password_confirmation => "05496741", :primeiroNome => "Francisco", :ultimoNome => "Coelho")
+User.create(:email => "04016@ipam.pt", :password => "03949355", :password_confirmation => "03949355", :primeiroNome => "Henrique", :ultimoNome => "Pires")
+User.create(:email => "12609@ipam.pt", :password => "13041854", :password_confirmation => "13041854", :primeiroNome => "Irina", :ultimoNome => "Amaral")
+User.create(:email => "03976@ipam.pt", :password => "12317375", :password_confirmation => "12317375", :primeiroNome => "Isabel", :ultimoNome => "Machado")
+User.create(:email => "03981@ipam.pt", :password => "06229682", :password_confirmation => "06229682", :primeiroNome => "Joaquim", :ultimoNome => "Marques")
+User.create(:email => "04018@ipam.pt", :password => "05658364", :password_confirmation => "05658364", :primeiroNome => "José", :ultimoNome => "Reis")
+ 
+User.create(:email => "04048@ipam.pt", :password => "10005577", :password_confirmation => "10005577", :primeiroNome => "Luís", :ultimoNome => "Schwab")
+User.create(:email => "04031@ipam.pt", :password => "9101002", :password_confirmation => "9101002", :primeiroNome => "Mafalda", :ultimoNome => "Ferreira")
+User.create(:email => "21690@ipam.pt", :password => "10740577", :password_confirmation => "10740577", :primeiroNome => "Mafalda", :ultimoNome => "Nogueira")
+User.create(:email => "07372@ipam.pt", :password => "10311526", :password_confirmation => "10311526", :primeiroNome => "Manuel", :ultimoNome => "Gouveia")
+User.create(:email => "04029@ipam.pt", :password => "03329036", :password_confirmation => "03329036", :primeiroNome => "Mário", :ultimoNome => "Coelho")
+User.create(:email => "04714@ipam.pt", :password => "05708686", :password_confirmation => "05708686", :primeiroNome => "Nunes", :ultimoNome => "Carneiro")
+ 
+User.create(:email => "08130@ipam.pt", :password => "08131415", :password_confirmation => "08131415", :primeiroNome => "Paula", :ultimoNome => "Arriscado")
+User.create(:email => "08161@ipam.pt", :password => "05800099", :password_confirmation => "05800099", :primeiroNome => "Paula", :ultimoNome => "Campos")
+User.create(:email => "03994@ipam.pt", :password => "04473391", :password_confirmation => "04473391", :primeiroNome => "Paulo", :ultimoNome => "Porto")
+User.create(:email => "03996@ipam.pt", :password => "06563401", :password_confirmation => "06563401", :primeiroNome => "Pedro", :ultimoNome => "Aguiar")
+User.create(:email => "07371@ipam.pt", :password => "09848347", :password_confirmation => "09848347", :primeiroNome => "Pedro", :ultimoNome => "Barbosa")
+User.create(:email => "00164@ipam.pt", :password => "10877808", :password_confirmation => "10877808", :primeiroNome => "Ricardo", :ultimoNome => "Mena")
+ 
+User.create(:email => "06525@ipam.pt", :password => "08988620", :password_confirmation => "08988620", :primeiroNome => "Rui", :ultimoNome => "Dias")
+User.create(:email => "08133@ipam.pt", :password => "08819115", :password_confirmation => "08819115", :primeiroNome => "Rui", :ultimoNome => "Saavedra")
+User.create(:email => "04035@ipam.pt", :password => "08746359", :password_confirmation => "08746359", :primeiroNome => "Sandra", :ultimoNome => "Gomes")
+User.create(:email => "03999@ipam.pt", :password => "07297492", :password_confirmation => "07297492", :primeiroNome => "Sílvia", :ultimoNome => "Bandeira")
+User.create(:email => "07477@ipam.pt", :password => "10007167", :password_confirmation => "10007167", :primeiroNome => "Susana", :ultimoNome => "Santos")
+User.create(:email => "02029@ipam.pt", :password => "11128634", :password_confirmation => "11128634", :primeiroNome => "Teresa", :ultimoNome => "Aragonez")
+ 
+ 
+#Staff
+User.create(:email => "04154@ipam.pt", :password => "08490350", :password_confirmation => "08490350", :primeiroNome => "Diana", :ultimoNome => "Barradas")
+User.create(:email => "20585@ipam.pt", :password => "13376142", :password_confirmation => "13376142", :primeiroNome => "Joel", :ultimoNome => "Regufe")
+User.create(:email => "04133@ipam.pt", :password => "07106256", :password_confirmation => "07106256", :primeiroNome => "Teresa", :ultimoNome => "Aragonez")
 
-User.create(:email => "joel.regufe@ipam.pt", :password => "regufe_regufe", :password_confirmation => "regufe_regufe", :gestorM => '1' , :primeiroNome => "Joel", :segundoNome => "Regufe")
-User.create(:email => "a.regufe@gmail.com", :password => "regufe_regufe", :password_confirmation => "regufe_regufe", :gestorCSH => '1' , :primeiroNome => "Alberto", :segundoNome => "Regufe")
+
+
+
+
+
+
+
 
 
 Polos.create(nome:"Instituto Português de Administração de Marketing do Porto", local: "1");
@@ -83,6 +128,7 @@ Category.create(nome:"Dissertação/Projeto Profissional/Estágio Profissional",
 
 
 
+# Primeiro Ano - Primeiro Semestre
 
 Category.create(nome:"Gestão Integrada do Design", area_cientifica:"Ciências do Design", anocurricular: 1 , semestre: 1 , creditos: 6 , codigouc: "M10311", tipo:"Semestral", teorica_pratica: 30 ,  cursos_id: 3 )
 Category.create(nome:"Design Thinking", area_cientifica:"Ciências do Design", anocurricular: 1 , semestre: 1 , creditos: 6 , codigouc: "M10312", tipo:"Semestral", teorica_pratica: 30, cursos_id: 3)

@@ -10,4 +10,7 @@
         = job.docente
       %p
         = job.user.email
+      %h3
+        = link_to "Submeter para Avaliação", :controller => "jobs", :action => "notifica", :id => job.id  
       %estado= 'Estado:' + ' ' + job.situacao
+       

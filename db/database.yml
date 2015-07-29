@@ -3,7 +3,7 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: jobs_board-master_development
+  database: pucs_board-master_development
   pool: 5
   username: regufe
   password: regufe
@@ -13,7 +13,7 @@ test:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: jobs_board-master_test
+  database: pucs_board-master_test
   pool: 5
   username: regufe
   password: regufe
@@ -24,7 +24,7 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: jobs_board-master_production
+  database: pucs_board-master_production
   pool: 5
   username: regufe
   password: regufe
